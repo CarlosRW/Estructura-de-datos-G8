@@ -5,19 +5,17 @@ import java.util.List;
 
 /**
  *
- * @author carlos
+ * @author Grupo 8
  */
 
 // Representa la Caja (Lista Doble), contiene las 52 instancias únicas de Carta.
 public class Caja {
-
     // Almacena las 52 cartas
     private final List<Carta> baraja;
 
-    // Constructor
+    // Constructor 
     public Caja() {
         this.baraja = new ArrayList<>();
-        // Crea las 52 cartas, 13 por cada palo
         for (Carta.Palo palo : Carta.Palo.values()) {
             for (Carta.Valor valor : Carta.Valor.values()) {
                 baraja.add(new Carta(palo, valor));

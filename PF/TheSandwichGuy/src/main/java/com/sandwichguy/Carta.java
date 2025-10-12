@@ -2,15 +2,14 @@ package com.sandwichguy;
 
 /**
  *
- * @author carlos ramirez wong
+ * @author Grupo 8
  */
 
 /**
  * Clase Carta: define su valor, nombre, símbolo y color.
  */
 public class Carta {
-    
-    // --- Enums para Palo y Valor ---
+    // Enums 
     public enum Palo {
         CORAZONES('♥', "Rojo"),
         DIAMANTES('♦', "Rojo"),
@@ -46,7 +45,7 @@ public class Carta {
         public int getValorNumerico() { return valorNumerico; }
     }
 
-    // --- Atributos de la Carta ---
+    // Atributos
     private final Palo palo;
     private final Valor valor;
 
@@ -56,7 +55,7 @@ public class Carta {
         this.valor = valor;
     }
 
-    // --- Getters ---
+    // Getters
     public Palo getPalo() { return palo; }
     public Valor getValor() { return valor; }
     
@@ -65,9 +64,7 @@ public class Carta {
         return valor.getValorNumerico();
     }
 
-    /**
-     * Formato de visualización: [SímboloValorSímboloPalo] (ej: [A♥]).
-     */
+    // Formato de visualización: [SímboloValorSímboloPalo] (ej: [A♥]).
     @Override
     public String toString() {
         return String.format("[%s%c]", valor.getSimbolo(), palo.getSimbolo());
