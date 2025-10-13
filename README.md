@@ -7,7 +7,6 @@
 | Carlos Eduardo Ramírez Wong | FI24037073 |
 | Allan David Soto Suárez | FI24036133 |
 | Yirlania Córdoba Muñoz |  Fl23031490 |
-
 | Jimena Hernández Martínez | FH23013963 | 
 
 ## Herramientas de Desarrollo
