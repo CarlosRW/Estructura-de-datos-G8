@@ -5,20 +5,16 @@
 | Nombre | Carné | Usuario Git | Correo Git |
 |---|---|---|---|
 | Carlos Eduardo Ramírez Wong | FI24037073 | CarlosRW | carlos.ramirezw23@gmail.com |
-| Allan David Soto Suárez | X |
-| Yirlania Córdoba Muñoz | X |
-| Jimena Hernández Martínez | X | 
-
-## IDEs Utilizados
-
-- [Apache NetBeans IDE](https://netbeans.apache.org/front/main/index.html)
+| Allan David Soto Suárez | FI24036133 | AllanSS213 | allansotosuarez070@gmail.com |
+| Yirlania Córdoba Muñoz | Fl23031490 | Yirlaniam | yirlania55@gmail.com |
+| Jimena Hernández Martínez | FH23013963 | Hernandezj1204 |Jimenahm1204@gmail.com |
 
 ## Especificaciones Técnicas
 | Componente | Detalle |
 |---|---|
 | Versión Java | Java SE 21 & JDK 21 (LTS) |
-| IDE/Editor Utilizado | NetBeans IDE |
-| Interaz Gráfica |  |
+| IDE/Editor Utilizado | [Apache NetBeans IDE](https://netbeans.apache.org/front/main/index.html) |
+| Interaz Gráfica | [JFrame](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html) |
 
 ## Instructivo de Instalación, Compilación y Ejecución
 
@@ -40,3 +36,4 @@ Usando NetBeans:
 
 ### 3. Ejecución
 ...
+
