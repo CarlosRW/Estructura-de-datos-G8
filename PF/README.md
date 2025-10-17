@@ -35,5 +35,10 @@ Usando NetBeans:
 - Para compilar, haz clic derecho en el proyecto y selecciona Clean and Build.
 
 ### 3. Ejecución
-...
+Usando NetBeans:
+
+- Haz clic derecho en la clase Main.java dentro del paquete com.sandwichguy.
+
+- Selecciona Run File.
+
 
