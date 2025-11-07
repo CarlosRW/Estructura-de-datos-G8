@@ -1,15 +1,16 @@
 package com.sandwichguy;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Grupo 8
  */
 
-/**
- * Clase Carta: define su valor, nombre, símbolo y color.
- */
+// Clase Carta: define su valor, nombre, símbolo y color
 public class Carta {
-    // Enums 
+
+    // --- ENUMS ---
     public enum Palo {
         CORAZONES('♥', "Rojo"),
         DIAMANTES('♦', "Rojo"),
@@ -24,8 +25,13 @@ public class Carta {
             this.color = color;
         }
 
-        public char getSimbolo() { return simbolo; }
-        public String getColor() { return color; }
+        public char getSimbolo() {
+            return simbolo;
+        }
+
+        public String getColor() {
+            return color;
+        }
     }
 
     public enum Valor {
@@ -41,27 +47,53 @@ public class Carta {
             this.valorNumerico = valorNumerico;
         }
 
-        public String getSimbolo() { return simbolo; }
-        public int getValorNumerico() { return valorNumerico; }
+        public String getSimbolo() {
+            return simbolo;
+        }
+
+        public int getValorNumerico() {
+            return valorNumerico;
+        }
     }
 
     // Atributos
     private final Palo palo;
     private final Valor valor;
+    private final ImageIcon imagen;
 
-    // Constructor
-    public Carta(Palo palo, Valor valor) {
+    // --- CONSTRUCTOR ---
+    public Carta(Palo palo, Valor valor, ImageIcon imagen) {
         this.palo = palo;
         this.valor = valor;
+        this.imagen = imagen;
     }
 
-    // Getters
-    public Palo getPalo() { return palo; }
-    public Valor getValor() { return valor; }
-    
+    // --- GETTERS ---
+    public Palo getPalo() {
+        return palo;
+    }
+
+    public Valor getValor() {
+        return valor;
+    }
+
+    public ImageIcon getImagen() {
+        return imagen;
+    }
+
     // Obtiene el valor numérico para la lógica del sándwich.
     public int getValorParaSandwich() {
         return valor.getValorNumerico();
+    }
+
+    // Método para mostrar las características
+    public String getCaracteristicas() {
+        return String.format("%s de %s (%c) | Valor: %d | Color: %s",
+                valor.toString(),
+                palo.toString(),
+                palo.getSimbolo(),
+                getValorParaSandwich(),
+                palo.getColor());
     }
 
     // Formato de visualización: [SímboloValorSímboloPalo] (ej: [A♥]).
