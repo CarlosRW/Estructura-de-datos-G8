@@ -14,6 +14,10 @@ public class Caja {
     // Almacena las 52 cartas
     private final List<Carta> baraja;
 
+    public Caja() {
+        this.baraja = new ArrayList<>();
+    }
+    
     public Caja(List<Carta> cartasIniciales) {
         this.baraja = new ArrayList<>(cartasIniciales);
     }
@@ -32,8 +36,24 @@ public class Caja {
         return new ArrayList<>(baraja);
     }
 
-    public void agregarCartas(List<Carta> cartas) {
+    public void agregar(Carta carta) {
+        this.baraja.add(carta);
+    }
+    
+    public void agregarTodas(List<Carta> cartas) {
         this.baraja.addAll(cartas);
+    }
+    
+    public void limpiar() {
+        this.baraja.clear();
+    }
+    
+    public boolean estaVacia() {
+        return baraja.isEmpty();
+    }
+    
+    public int tamano() {
+        return baraja.size();
     }
 
     // Método para cumplir con la visualización de la Caja

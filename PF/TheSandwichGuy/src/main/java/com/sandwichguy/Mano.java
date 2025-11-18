@@ -18,30 +18,55 @@ public class Mano {
         this.cartas = new ArrayList<>();
     }
 
-    public void agregarCarta(Carta carta) {
+    public void agregar(Carta carta) {
         // Añadir una carta al final de la lista
         this.cartas.add(carta);
     }
-
-    public void removerCarta(Carta carta) {
-        // Remover una carta
-        this.cartas.remove(carta);
+    
+    // Alias para mantener compatibilidad
+    public void agregarCarta(Carta carta) {
+        this.agregar(carta);
     }
 
-    public boolean isEmpty() {
+    public boolean eliminar(Carta carta) {
+        // Remover una carta
+        return this.cartas.remove(carta);
+    }
+    
+    // Alias para mantener compatibilidad
+    public void removerCarta(Carta carta) {
+        this.eliminar(carta);
+    }
+
+    public boolean estaVacia() {
         return cartas.isEmpty();
     }
+    
+    // Alias para mantener compatibilidad
+    public boolean isEmpty() {
+        return this.estaVacia();
+    }
 
-    public int size() {
+    public int tamano() {
         return cartas.size();
+    }
+    
+    // Alias para mantener compatibilidad
+    public int size() {
+        return this.tamano();
     }
 
     public void limpiar() {
         cartas.clear();
     }
 
-    //Devuelve las cartas de la Mano.
+    // Devuelve una copia de las cartas de la Mano
+    public List<Carta> obtenerTodasLasCartas() {
+        return new ArrayList<>(this.cartas);
+    }
+    
+    // Alias para mantener compatibilidad
     public List<Carta> obtenerCartas() {
-        return this.cartas;
+        return this.obtenerTodasLasCartas();
     }
 }

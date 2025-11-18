@@ -59,7 +59,7 @@ public class Carta {
     // Atributos
     private final Palo palo;
     private final Valor valor;
-    private final ImageIcon imagen;
+    private ImageIcon imagen;  
 
     // --- CONSTRUCTOR ---
     public Carta(Palo palo, Valor valor, ImageIcon imagen) {
@@ -79,6 +79,10 @@ public class Carta {
 
     public ImageIcon getImagen() {
         return imagen;
+    }
+    
+    public void setImagen(ImageIcon imagen) {
+        this.imagen = imagen;
     }
 
     // Obtiene el valor numérico para la lógica del sándwich.

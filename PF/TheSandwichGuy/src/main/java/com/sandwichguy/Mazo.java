@@ -1,6 +1,7 @@
 package com.sandwichguy;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
@@ -37,12 +38,22 @@ public class Mazo {
         return pila.getFirst(); // Ver carta de encima
     }
 
-    public boolean isEmpty() {
+    public boolean estaVacio() {
         return pila.isEmpty();
     }
+    
+    // Alias para mantener compatibilidad
+    public boolean isEmpty() {
+        return this.estaVacio();
+    }
 
-    public int size() {
+    public int tamano() {
         return pila.size();
+    }
+    
+    // Alias para mantener compatibilidad
+    public int size() {
+        return this.tamano();
     }
 
     public void limpiar() {
@@ -50,7 +61,15 @@ public class Mazo {
     }
 
     public List<Carta> obtenerTodasLasCartas() {
-        // Devuelve las cartas para la visualización
-        return List.copyOf(pila);
+        // Devuelve una copia de las cartas para la visualización
+        return new ArrayList<>(pila);
+    }
+    
+    /**
+     * Obtiene la carta superior del mazo sin eliminarla
+     * @return La carta superior o null si el mazo está vacío
+     */
+    public Carta verCartaSuperior() {
+        return pila.peek();
     }
 }

@@ -1,6 +1,7 @@
 package com.sandwichguy;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
@@ -19,20 +20,40 @@ public class Pozo {
         this.cola = new ArrayDeque<>();
     }
 
-    public void enqueue(Carta carta) {
+    public void agregar(Carta carta) {
         cola.addLast(carta); // Agregar carta al final de la cola (por donde se descarta)
     }
+    
+    // Alias para mantener compatibilidad
+    public void enqueue(Carta carta) {
+        this.agregar(carta);
+    }
 
-    public Carta dequeue() {
+    public Carta sacar() {
         return cola.pollFirst(); // Tomar carta del frente de la cola
     }
-
-    public boolean isEmpty() {
-        return cola.isEmpty();
+    
+    // Alias para mantener compatibilidad
+    public Carta dequeue() {
+        return this.sacar();
     }
 
-    public int size() {
+    public boolean estaVacia() {
+        return cola.isEmpty();
+    }
+    
+    // Alias para mantener compatibilidad
+    public boolean isEmpty() {
+        return this.estaVacia();
+    }
+
+    public int tamano() {
         return cola.size();
+    }
+    
+    // Alias para mantener compatibilidad
+    public int size() {
+        return this.tamano();
     }
 
     public void limpiar() {
@@ -40,6 +61,22 @@ public class Pozo {
     }
 
     public List<Carta> obtenerTodasLasCartas() {
-        return List.copyOf(cola);
+        return new ArrayList<>(cola);
+    }
+    
+    /**
+     * Obtiene la última carta agregada al pozo (la más reciente)
+     * @return La última carta o null si está vacío
+     */
+    public Carta obtenerUltimaCarta() {
+        return cola.peekLast();
+    }
+    
+    /**
+     * Devuelve la carta superior del pozo sin eliminarla
+     * @return La carta superior o null si el pozo está vacío
+     */
+    public Carta peek() {
+        return cola.peekFirst();
     }
 }
