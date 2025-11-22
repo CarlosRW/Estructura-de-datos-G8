@@ -39,6 +39,39 @@ Usando NetBeans:
 
 - Haz clic derecho en la clase Main.java dentro del paquete com.sandwichguy.
 
-- Selecciona Run File.
+-Selecciona "Run File".
+Esto abrirá la interfaz gráfica del juego y lo preparará para iniciar.
+
+- La interfaz mostrará el mensaje:
+  
+“Juego listo. Haz click en BARAJAR”.
+En este punto el mazo está preparado, pero aún no barajado.
+
+- Haz clic en el botón “BARAJAR”.
+  
+El mazo se mezclará completamente y el juego quedará listo para repartir.
+
+- Después de barajar, presiona “REPARTIR MANO”.
+
+El sistema repartirá automáticamente las cartas iniciales.
+Las cartas repartidas aparecerán en la sección “TU MANO”.
+
+- Con tus cartas ya visibles en “TU MANO”, selecciona 3 cartas.
+  
+Estas 3 cartas se usarán para validar si juntas forman un posible sándwich (combinación válida según las reglas internas del juego).
+
+Al elegir las 3 cartas, el juego evaluará si forman un sándwich.
+Si la combinación es válida, el juego te lo indicará.
+Si no lo es, podrás intentar otra combinación mientras sigas teniendo cartas disponibles.
+
+- Si deseas continuar la partida, presiona “DESCARTAR”.
+  
+Esto permitirá deshacerte de la combinación actual y seguir jugando con las cartas restantes o solicitar nuevas acciones si el juego lo permite.
+
+- Repite el proceso de seleccionar cartas, validar combinaciones y descartar hasta completar todos los sándwiches posibles o quedarte sin cartas útiles.
+
+- El juego termina cuando ya no puedes formar más sándwiches o cuando el mazo se ha agotado.
+
+
 
 
