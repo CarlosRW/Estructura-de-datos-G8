@@ -1,4 +1,13 @@
-# Projecto Final - The Sandwich Guy
+# Proyecto Final - The Sandwich Guy
+
+| Curso    | Estructuras de Datos    |
+| :------- | :---------------------- |
+| Código   | SC-304                  |
+| Periodo  | III Cuatrimestre 2025   |
+| Profesor | Luis Andrés Rojas Matey |
+| Valor    | 50 %                    |
+
+<br />
 
 ## Integrantes
 
@@ -9,69 +18,82 @@
 | Yirlania Córdoba Muñoz | Fl23031490 | Yirlaniam | yirlania55@gmail.com |
 | Jimena Hernández Martínez | FH23013963 | Hernandezj1204 |Jimenahm1204@gmail.com |
 
+---
+
+## Objetivo
+
+Aplicar los conocimientos adquiridos en el curso de Estructuras de Datos para desarrollar una aplicación de escritorio del juego **_The Sandwich Guy_** utilizando la versión **Java SE 21** y las estructuras de datos específicas solicitadas (Lista Doble, Pila, Lista Circular, Cola).
+
+---
+
+## Componentes y Estructuras de Datos
+
+| Componente | Clase | Estructura de Datos Solicitada |
+| :--- | :--- | :--- |
+| Carta | Carta.java | Objeto/Clase propia |
+| Caja | Caja.java | Lista Doble |
+| Mazo | Mazo.java | Pila |
+| Mano | Mano.java | Lista Circular |
+| Pozo | Pozo.java | Cola |
+
+---
+
 ## Especificaciones Técnicas
 | Componente | Detalle |
 |---|---|
 | Versión Java | Java SE 21 & JDK 21 (LTS) |
 | IDE/Editor Utilizado | [Apache NetBeans IDE](https://netbeans.apache.org/front/main/index.html) |
-| Interaz Gráfica | [JFrame](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html) |
+| Interfaz Gráfica | [JFrame](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html) |
+
+---
 
 ## Instructivo de Instalación, Compilación y Ejecución
 
 ### 1. Instalación
 
-- Asegúrate de tener instalado el JDK 21 o superior.
-- Utiliza NetBeans IDE (versión recomendada) o configura tu IDE/Editor preferido con el JDK 21.
+* Asegúrate de tener instalado el **JDK 21** o superior.
+* Utiliza **Apache NetBeans IDE** (versión recomendada) o configura tu IDE/Editor preferido con el JDK 21.
 
 ### 2. Compilación
-Usando NetBeans:
 
-- Abre NetBeans y selecciona "Open Project".
+#### Usando NetBeans:
 
-- Navega hasta la carpeta raíz del proyecto (TheSandwichGuy).
+1. Abre NetBeans y selecciona **"Open Project"**.
 
-- NetBeans configurará automáticamente la compilación usando el JDK 21.
+2. Navega hasta la carpeta raíz del proyecto (`TheSandwichGuy`).
 
-- Para compilar, haz clic derecho en el proyecto y selecciona Clean and Build.
+3. NetBeans configurará automáticamente la compilación usando el JDK 21.
+
+4. Para compilar, haz clic derecho en el proyecto y selecciona **Clean and Build**.
 
 ### 3. Ejecución
-Usando NetBeans:
 
-- Haz clic derecho en la clase Main.java dentro del paquete com.sandwichguy.
+#### Usando NetBeans:
 
--Selecciona "Run File".
-Esto abrirá la interfaz gráfica del juego y lo preparará para iniciar.
+1. Haz clic derecho en la `Interfaz.java` (la interfaz principal) o la clase que contiene el método `main` dentro del paquete `com.sandwichguy`.
 
-- La interfaz mostrará el mensaje:
-  
-“Juego listo. Haz click en BARAJAR”.
-En este punto el mazo está preparado, pero aún no barajado.
+2. Selecciona **"Run File"**.
 
-- Haz clic en el botón “BARAJAR”.
-  
-El mazo se mezclará completamente y el juego quedará listo para repartir.
+* Esto abrirá la interfaz gráfica del juego y lo preparará para iniciar.
 
-- Después de barajar, presiona “REPARTIR MANO”.
+<br />
 
-El sistema repartirá automáticamente las cartas iniciales.
-Las cartas repartidas aparecerán en la sección “TU MANO”.
+### Pasos de la Partida
 
-- Con tus cartas ya visibles en “TU MANO”, selecciona 3 cartas.
-  
-Estas 3 cartas se usarán para validar si juntas forman un posible sándwich (combinación válida según las reglas internas del juego).
+Al ejecutar la aplicación, se debe seleccionar la opción **"Crear una partida nueva"** y seguir los siguientes pasos:
 
-Al elegir las 3 cartas, el juego evaluará si forman un sándwich.
-Si la combinación es válida, el juego te lo indicará.
-Si no lo es, podrás intentar otra combinación mientras sigas teniendo cartas disponibles.
+1. El juego se inicializa con el mensaje: **“Juego listo. Haz click en BARAJAR”**. El mazo está preparado en la `Caja`, pero aún no barajado.
+2. Haz clic en el botón **“BARAJAR”**. El sistema moverá y mezclará las cartas de la `Caja` al `Mazo`.
+3. Después de barajar, presiona **“REPARTIR MANO”**. El sistema repartirá automáticamente las ocho cartas iniciales a la sección **“TU MANO”**.
+4. Con tus cartas ya visibles en **“TU MANO”**, selecciona **3 cartas**.
+5.  El juego evaluará si las cartas forman un sándwich válido e indicará las **permutaciones** y la cantidad de cartas a tomar del `Mazo`.
+6.  Si la combinación es válida, presiona **“DESCARTAR”** para enviar las tres cartas al `Pozo` y tomar la cantidad de cartas correspondiente al sándwich más beneficioso (4, 3 o 2).
+7.  El juego continúa hasta que el **Mazo** quede vacío (victoria) o no se pueda formar un sándwich válido (derrota).
 
-- Si deseas continuar la partida, presiona “DESCARTAR”.
-  
-Esto permitirá deshacerte de la combinación actual y seguir jugando con las cartas restantes o solicitar nuevas acciones si el juego lo permite.
+---
 
-- Repite el proceso de seleccionar cartas, validar combinaciones y descartar hasta completar todos los sándwiches posibles o quedarte sin cartas útiles.
+## Referencias y Herramientas
 
-- El juego termina cuando ya no puedes formar más sándwiches o cuando el mazo se ha agotado.
+* **Repositorio del profesor:** https://github.com/larmcr/2025-III-SC-304
 
-
-
-
+---
