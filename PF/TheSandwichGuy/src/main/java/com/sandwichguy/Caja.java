@@ -1,6 +1,6 @@
 package com.sandwichguy;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -9,21 +9,23 @@ import java.util.List;
  */
 
 // Representa la Caja (Lista Doble), contiene las 52 instancias únicas de Carta.
+// Se usa LinkedList para cumplir con la especificación de "lista doble".
 public class Caja {
 
     // Almacena las 52 cartas
     private final List<Carta> baraja;
 
     public Caja() {
-        this.baraja = new ArrayList<>();
+        this.baraja = new LinkedList<>();
     }
     
     public Caja(List<Carta> cartasIniciales) {
-        this.baraja = new ArrayList<>(cartasIniciales);
+        this.baraja = new LinkedList<>(cartasIniciales);
     }
 
+    // Mueve todas las cartas de la Caja (las saca de aquí).
     public List<Carta> moverTodoElContenido() {
-        List<Carta> contenido = new ArrayList<>(this.baraja);
+        List<Carta> contenido = new LinkedList<>(this.baraja);
         this.baraja.clear();
         return contenido;
     }
@@ -33,7 +35,7 @@ public class Caja {
     }
 
     public List<Carta> obtenerCartas() {
-        return new ArrayList<>(baraja);
+        return new LinkedList<>(baraja);
     }
 
     public void agregar(Carta carta) {
