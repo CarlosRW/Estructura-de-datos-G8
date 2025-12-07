@@ -80,16 +80,23 @@ Aplicar los conocimientos adquiridos en el curso de Estructuras de Datos para de
 
 ### Pasos de la Partida
 
-Al ejecutar la aplicación, se debe seleccionar la opción **"Crear una partida nueva"** y seguir los siguientes pasos:
+## Al ejecutar la aplicación, se debe seleccionar la opción **"Crear una partida nueva"** y seguir los siguientes pasos:
 
-1. El juego se inicializa con el mensaje: **“Juego listo. Haz click en BARAJAR”**. El mazo está preparado en la `Caja`, pero aún no barajado.
-2. Haz clic en el botón **“BARAJAR”**. El sistema moverá y mezclará las cartas de la `Caja` al `Mazo`.
-3. Después de barajar, presiona **“REPARTIR MANO”**. El sistema repartirá automáticamente las ocho cartas iniciales a la sección **“TU MANO”**.
-4. Con tus cartas ya visibles en **“TU MANO”**, selecciona **3 cartas**.
-5.  El juego evaluará si las cartas forman un sándwich válido e indicará las **permutaciones** y la cantidad de cartas a tomar del `Mazo`.
-6.  Si la combinación es válida, presiona **“DESCARTAR”** para enviar las tres cartas al `Pozo` y tomar la cantidad de cartas correspondiente al sándwich más beneficioso (4, 3 o 2).
-7.  El juego continúa hasta que el **Mazo** quede vacío (victoria) o no se pueda formar un sándwich válido (derrota).
+1- El juego se inicializa con el mensaje: “Juego listo. Haz click en BARAJAR”. El mazo está preparado en la Caja, pero aún no barajado.
 
+2- Haz clic en el botón “BARAJAR”. El sistema moverá y mezclará las cartas de la Caja al Mazo.
+
+3- Después de barajar, presiona “REPARTIR MANO”. El sistema repartirá automáticamente las ocho cartas iniciales a la sección “TU MANO”.
+
+4- Con tus cartas ya visibles en “TU MANO”, selecciona 3 cartas. (Valores: 2-10 = número; J, Q, K = 10; As = 1 o 11).
+
+5- El juego evaluará si las cartas forman un 21 Perfecto o un sándwich válido, e indicará las permutaciones y la cantidad de cartas a tomar del Mazo.
+
+6- Si la combinación es válida (21 o sándwich), presiona “DESCARTAR” para enviar las tres cartas al Pozo y tomar la cantidad de cartas correspondiente (4 por 21, o 2, 3 o 4 por sándwich).
+
+7- Si la combinación no es válida, el jugador roba 1 carta del Mazo (penalización) y la añade a “TU MANO” sin descartar.
+
+El juego continúa hasta que el Mazo quede vacío (victoria) o no se pueda formar una combinación válida y “TU MANO” exceda un límite de cartas establecido (derrota).
 ---
 
 ## Referencias y Herramientas
@@ -97,3 +104,4 @@ Al ejecutar la aplicación, se debe seleccionar la opción **"Crear una partida 
 * **Repositorio del profesor:** https://github.com/larmcr/2025-III-SC-304
 
 ---
+
