@@ -41,7 +41,7 @@ public class Mazo {
     public boolean estaVacio() {
         return pila.isEmpty();
     }
-    
+
     // Alias para mantener compatibilidad
     public boolean isEmpty() {
         return this.estaVacio();
@@ -50,7 +50,7 @@ public class Mazo {
     public int tamano() {
         return pila.size();
     }
-    
+
     // Alias para mantener compatibilidad
     public int size() {
         return this.tamano();
@@ -64,9 +64,10 @@ public class Mazo {
         // Devuelve una copia de las cartas para la visualización
         return new ArrayList<>(pila);
     }
-    
+
     /**
      * Obtiene la carta superior del mazo sin eliminarla
+     *
      * @return La carta superior o null si el mazo está vacío
      */
     public Carta verCartaSuperior() {

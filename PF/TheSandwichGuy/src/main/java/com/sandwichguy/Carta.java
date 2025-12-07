@@ -59,7 +59,7 @@ public class Carta {
     // Atributos
     private final Palo palo;
     private final Valor valor;
-    private ImageIcon imagen;  
+    private ImageIcon imagen;
 
     // --- CONSTRUCTOR ---
     public Carta(Palo palo, Valor valor, ImageIcon imagen) {
@@ -80,7 +80,7 @@ public class Carta {
     public ImageIcon getImagen() {
         return imagen;
     }
-    
+
     public void setImagen(ImageIcon imagen) {
         this.imagen = imagen;
     }
@@ -104,5 +104,13 @@ public class Carta {
     @Override
     public String toString() {
         return String.format("[%s%c]", valor.getSimbolo(), palo.getSimbolo());
+    }
+
+    public boolean esMismoColor(Carta otra) {
+        return this.palo.getColor().equals(otra.getPalo().getColor());
+    }
+
+    public boolean esMismoPalo(Carta otra) {
+        return this.palo == otra.getPalo();
     }
 }
