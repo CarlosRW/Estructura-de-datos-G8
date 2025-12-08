@@ -641,9 +641,8 @@ public class Interfaz extends JFrame {
             l.setHorizontalAlignment(SwingConstants.CENTER);
             panelPozo.add(l, BorderLayout.CENTER);
         } else {
-            Carta ultima = pozo.obtenerUltimaCarta();
-            ImageIcon img = (ultima != null && ultima.getImagen() != null) ? ultima.getImagen()
-                    : cardImages.getOrDefault("reverso", new ImageIcon(createCardBackImage()));
+            // Usar la imagen reverso
+            ImageIcon img = cardImages.getOrDefault("mazo", cardImages.get("reverso"));
 
             JLabel l = new JLabel(img);
             l.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
