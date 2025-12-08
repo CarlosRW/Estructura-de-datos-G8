@@ -6,7 +6,6 @@ import javax.swing.ImageIcon;
  *
  * @author Grupo 8
  */
-
 // Clase Carta: define su valor, nombre, símbolo y color
 public class Carta {
 

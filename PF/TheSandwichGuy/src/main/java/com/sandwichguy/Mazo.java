@@ -9,7 +9,6 @@ import java.util.List;
  *
  * @author grupo 8
  */
-
 // Representa el Mazo (Pila de Cartas) LIFO
 public class Mazo {
 
