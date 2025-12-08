@@ -172,10 +172,6 @@ public class Interfaz extends JFrame {
                 String key = p.name() + "_" + v.name();
                 ImageIcon icon = null;
 
-                // Mapeo especificado por usuario:
-                // Orden: A, 2, 3 ... K.
-                // Dentro de cada valor: Corazones, Picas, Diamantes, Treboles.
-                // Indices 00-03: Ases. 04-07: Doses...
                 int suitIndex = 0;
                 switch (p) {
                     case CORAZONES:
@@ -192,7 +188,7 @@ public class Interfaz extends JFrame {
                         break;
                 }
 
-                int rankIndex = v.ordinal(); // 0(As)..12(K) en Carta.Valor
+                int rankIndex = v.ordinal(); 
                 int deckIndex = (rankIndex * 4) + suitIndex;
 
                 icon = loadFromBarajaIndex(deckIndex);
@@ -327,7 +323,6 @@ public class Interfaz extends JFrame {
             return;
         }
         mano.ordenar();
-        // Reset selection because indices change
         selectedCards = new boolean[mano.size()];
         actualizarInterfaz();
         statusLabel.setText("Mano ordenada.");
